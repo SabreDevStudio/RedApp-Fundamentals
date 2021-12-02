@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RedApp Fundamentals
+Bundle-SymbolicName: com.sabre.redapp.fundamentals;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sabre.redapp.fundamentals.Activator
+Bundle-Vendor: Sabre Travel Network
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.sabre.edge.redapp.contactdetails;bundle-version="1.0.6",
+ com.sabre.edge.platform.core.common;bundle-version="1.4.61",
+ com.sabre.edge.cf.core;bundle-version="1.0.49",
+ com.sabre.edge.dynamo.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.sabre.redapp.fundamentals
+Bundle-ActivationPolicy: lazy

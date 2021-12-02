@@ -1,0 +1,8 @@
+!build/
+/build/
+/core/typings
+node_modules/
+/src/code/**/*.js
+/src/**/*.map
+*.iml
+/src/tests/test-setup.ts

@@ -1,0 +1,26 @@
+{
+  "redappId": "1234567890123456789012",
+  "bundleSymbolicName": "com.sabre.redapp.fundamentals",
+  "bundleName": "RedApp Fundamentals",
+  "name": "com-sabre-redapp-fundamentals-web-module",
+  "contactDetails": {
+    "author": "Alex Mene",
+    "email": "am@sabre.com",
+    "phone": "5511-31461500",
+    "companyName": "Sabre",
+    "contactPerson": "AM",
+    "website": "n/a"
+  },
+  "authorizations":[
+    {
+      "name": "com.sabre.edge.cf.sws.SWS",
+      "actions":[
+        {
+          "name":"UpdateReservationRQ",
+          "threshold":1
+        }
+      ]
+    }
+
+  ]
+}

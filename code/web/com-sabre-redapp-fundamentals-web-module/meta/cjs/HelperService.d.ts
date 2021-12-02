@@ -1,0 +1,42 @@
+import { AbstractService } from "sabre-ngv-app/app/services/impl/AbstractService";
+import { CommandMessageBasicRs } from "sabre-ngv-pos-cdm/commsg";
+import { SoapRs } from "sabre-ngv-communication/interfaces/SoapRs";
+import { SoapRq } from "sabre-ngv-communication/interfaces/SoapRq";
+import { RestResponse } from "sabre-ngv-communication/interfaces/RestResponse";
+import { RestRq } from "sabre-ngv-communication/interfaces/RestRq";
+import { CommandMessageReservationRs } from "sabre-ngv-pos-cdm/reservation";
+import { AgentProfileService } from "sabre-ngv-app/app/services/impl/AgentProfileService";
+export declare class HelperService extends AbstractService {
+    static SERVICE_NAME: string;
+    xmlPayloads: {
+        "ElementName": string;
+        "PersonName": string;
+        "ContactNumber": string;
+        "ContactNumbers": string;
+        "CustomerIdentifier": string;
+        "CustomerInfo": string;
+        "Email": string;
+        "Address": string;
+        "AddressSabre": string;
+        "AgencyInfo": string;
+        "TravelItineraryAddInfoRQ": string;
+        "AddRemarkRQ": string;
+        "Remark": string;
+        "SpecialReqDetails": string;
+        "PassengerDetailsRQ": string;
+        "MiscSegmentSellRQ": string;
+        "FOP_Remark": string;
+        "SabreCommandLLSRQ": string;
+    };
+    updateResRQ(): string;
+    createBookingRq(): string;
+    createRestRQ(): string;
+    getXmlPayload(name: string, values: any): string;
+    sendCommandMessage(payload: string, showRq: boolean, showRs: boolean): Promise<CommandMessageBasicRs>;
+    sendSWSRequest(request: SoapRq): Promise<SoapRs>;
+    sendRestRequest(request: RestRq): Promise<RestResponse>;
+    sendExternalHttpRequest(request: RestRq, options?: any, contentType?: any): Promise<RestResponse>;
+    getReservation(): Promise<CommandMessageReservationRs>;
+    refreshTipSummary(): void;
+    getAgentProfileService(): AgentProfileService;
+}
